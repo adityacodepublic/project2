@@ -48,7 +48,7 @@ function App() {
               <div className="flex flex-col space-y-1">
                 <Button
                   onClick={handleEmptyClick}
-                  type="button"
+                  type="reset"
                   variant={"outline"}
                   className="w-full"
                 >
