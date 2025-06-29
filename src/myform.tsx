@@ -26,7 +26,7 @@ export function MyForm({ children }: { children: ReactNode }) {
       schema={schemaProvider}
       onSubmit={(data, form) => {
         toast.success(<pre>{JSON.stringify(data)}</pre>);
-        form.reset();
+        form.reset({ username: "", type: "" as any });
       }}
     >
       {children}

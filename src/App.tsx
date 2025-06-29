@@ -12,6 +12,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { toast } from "sonner";
 import { CheckCircle, Circle } from "lucide-react";
 import { MyForm } from "./myform";
+import { ResetButton } from "./resetButton";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,6 +45,17 @@ function App() {
                   <CheckCircle className="h-4 w-4 mr-2 " />
                   Submit
                 </Button>
+              </div>
+              <div className="flex flex-col space-y-1">
+                <ResetButton
+                  type="reset"
+                  variant={"outline"}
+                  className="w-full"
+                  resetVal={{ username: "", type: "" as any }}
+                >
+                  <Circle className="h-4 w-4 mr-2" />
+                  Reset
+                </ResetButton>
               </div>
               <div className="flex flex-col space-y-1">
                 <Button
