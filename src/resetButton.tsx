@@ -11,7 +11,7 @@ export interface ResetButtonProps
 }
 
 export const ResetButton = forwardRef<HTMLButtonElement, ResetButtonProps>(
-  ({ resetVal, onClick, ...props }) => {
+  ({ resetVal, onClick, ...props }, ref) => {
     const { reset } = useFormContext();
     return (
       <Button
@@ -19,6 +19,7 @@ export const ResetButton = forwardRef<HTMLButtonElement, ResetButtonProps>(
           reset(resetVal);
           onClick?.(e);
         }}
+        ref={ref}
         {...props}
       />
     );
