@@ -19,6 +19,7 @@ const mySchema = z.object({
     .string()
     .array()
     .min(1, "minimum one color required !")
+    .default([""])
     .describe("Tell us your favourite colors!")
     .superRefine(fieldConfig({ fieldType: "colorAdder" })),
 });

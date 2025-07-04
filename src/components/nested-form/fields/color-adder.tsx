@@ -14,6 +14,7 @@ import { AutoForm } from "@/components/ui/autoform/AutoForm";
 import { ZodProvider } from "@autoform/zod";
 import * as z from "zod";
 import { toast } from "sonner";
+import { Badge } from "@/components/ui/badge";
 
 const color = z.string().array().min(1, "minimum one color required !");
 const mySchema = z.object({
@@ -56,9 +57,15 @@ export default function AddColors({ value, onValueChange }: AddColorsProps) {
               toast.success("data sent to server !" + JSON.stringify(data));
             }}
           >
-            <pre>
-              <code lang="ts">{JSON.stringify(value)}</code>
-            </pre>
+            {Array.isArray(value) && (
+              <div className="space-x-2">
+                {value.map((item, index) => (
+                  <Badge variant={"secondary"} key={index}>
+                    {item}
+                  </Badge>
+                ))}
+              </div>
+            )}
             <div className="flex flex-col space-y-2">
               <Button
                 type="submit"
