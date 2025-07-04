@@ -57,7 +57,7 @@ export default function AddColors({ value, onValueChange }: AddColorsProps) {
               toast.success("data sent to server !" + JSON.stringify(data));
             }}
           >
-            {Array.isArray(value) && (
+            {Array.isArray(value) && !!value.length && (
               <div className="space-x-2">
                 {value.map((item, index) => (
                   <Badge variant={"secondary"} key={index}>

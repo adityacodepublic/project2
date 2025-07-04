@@ -16,7 +16,7 @@ export const ColorAddField: React.FC<AutoFormFieldProps> = ({
   return (
     <div className="space-y-2">
       <AddColors value={formField.value} onValueChange={formField.onChange} />
-      {Array.isArray(formField.value) && (
+      {Array.isArray(formField.value) && !!formField.value.length && (
         <div className="space-x-2">
           {formField.value.map((item, index) => (
             <Badge variant={"secondary"} key={index}>
