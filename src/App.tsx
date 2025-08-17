@@ -37,7 +37,8 @@ function App() {
               </DialogDescription>
             </DialogHeader>
             <MyForm>
-              <div className="flex flex-col space-y-2">
+              <></>
+              {/* <div className="flex flex-col space-y-2">
                 <Button
                   type="submit"
                   className="w-full bg-[#2833ff] hover:bg-[#494fc6]"
@@ -67,7 +68,7 @@ function App() {
                   <Circle className="h-4 w-4 mr-2" />
                   Empty Button
                 </Button>
-              </div>
+              </div> */}
             </MyForm>
           </DialogContent>
         </Dialog>
