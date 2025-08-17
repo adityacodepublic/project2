@@ -13,6 +13,6 @@ export default defineConfig({
     exclude: ["lucide-react"],
   },
   server: {
-    allowedHosts: ["mvd7kv-5173.csb.app"],
+    allowedHosts: true,
   },
 });
